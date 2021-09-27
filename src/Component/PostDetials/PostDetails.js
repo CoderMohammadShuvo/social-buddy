@@ -9,7 +9,7 @@ const PostDetails = () => {
         fetch(url)
         .then(response => response.json())
         .then(data => setPost(data))
-    }, [])
+    }, [id])
     const { title, body} = post;
     
     const [ comments, setComment] = useState([]);
@@ -18,7 +18,7 @@ const PostDetails = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setComment(data))
-    },[])
+    },[id])
     
     return (
         <div>
